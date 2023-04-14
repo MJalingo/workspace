@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: rgb(238, 238, 238);
+}
+img {
+    text-align: center;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+} 
+input[type=text], select {
+  text-size-adjust: auto;
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit], input[type=file]{
+  text-size-adjust: auto;
+  width: 90%;
+  background-color: #0090ce;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color:Gray;
+}
+input[type=file]:hover {
+  background-color: gray;
+}
+div {
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+} 
+img{
+  height: 20rem;
+
+}
+h3 {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<img src="{{ url_for('static', path='/YT.png') }}" alt="Youtube logo" title="Youtube video downloader">
+<div id="main">
+    <form method="post" action="/download">
+      <input type="text" id="Link" name="Link" placeholder="Enter video link..">
+      <input type="file" id ="filePath" name="filePath" value="Select file location">
+      <input class="submit" type="submit" value="Download">
+    </form>
+</div>
+</body>
+</html>
